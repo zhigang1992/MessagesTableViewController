@@ -65,6 +65,15 @@
                        [NSDate distantPast],
                        [NSDate date],
                        nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(button)];
+}
+
+- (void)button{
+    //This line will make a difference.
+//    [self.view endEditing:YES];
+    
+    DemoViewController *demoVC = [[DemoViewController alloc] init];
+    [self.navigationController pushViewController:demoVC animated:YES];
 }
 
 #pragma mark - Table view data source
